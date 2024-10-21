@@ -22,9 +22,9 @@
     }
   ],
   "devDependencies": {
-    "jasmine-node": "1.2.2",
+    "jasmine-node": "3.0.0",
     "node-libs-browser": "^0.5.2",
-    "webpack": "^1.9.10"
+    "webpack": "^5.94.0"
   },
   "license": "MIT"
 }
