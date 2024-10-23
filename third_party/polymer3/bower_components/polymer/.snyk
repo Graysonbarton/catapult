@@ -1,0 +1,738 @@
+# Snyk (https://snyk.io) policy file, patches or ignores known vulnerabilities.
+version: v1.25.1
+ignore: {}
+# patches apply the minimum changes required to fix a vulnerability
+patch:
+  'npm:debug:20170905':
+    - wct-browser-legacy > mocha > debug:
+        patched: '2024-10-23T19:03:10.072Z'
+        id: 'npm:debug:20170905'
+        path: wct-browser-legacy > mocha > debug
+    - polymer-cli > web-component-tester > send > debug:
+        patched: '2024-10-23T19:03:10.072Z'
+        id: 'npm:debug:20170905'
+        path: polymer-cli > web-component-tester > send > debug
+  'npm:extend:20180424':
+    - polymer-cli > request > extend:
+        patched: '2024-10-23T19:03:10.072Z'
+        id: 'npm:extend:20180424'
+        path: polymer-cli > request > extend
+    - polymer-build > vinyl-fs > glob-stream > extend:
+        patched: '2024-10-23T19:03:10.072Z'
+        id: 'npm:extend:20180424'
+        path: polymer-build > vinyl-fs > glob-stream > extend
+    - polymer-cli > vinyl-fs > glob-stream > extend:
+        patched: '2024-10-23T19:03:10.072Z'
+        id: 'npm:extend:20180424'
+        path: polymer-cli > vinyl-fs > glob-stream > extend
+    - polymer-cli > inquirer > external-editor > extend:
+        patched: '2024-10-23T19:03:10.072Z'
+        id: 'npm:extend:20180424'
+        path: polymer-cli > inquirer > external-editor > extend
+    - polymer-cli > polymer-build > vinyl-fs > glob-stream > extend:
+        patched: '2024-10-23T19:03:10.072Z'
+        id: 'npm:extend:20180424'
+        path: polymer-cli > polymer-build > vinyl-fs > glob-stream > extend
+    - polymer-cli > yeoman-environment > inquirer > external-editor > extend:
+        patched: '2024-10-23T19:03:10.072Z'
+        id: 'npm:extend:20180424'
+        path: polymer-cli > yeoman-environment > inquirer > external-editor > extend
+    - polymer-cli > web-component-tester > wd > request > extend:
+        patched: '2024-10-23T19:03:10.072Z'
+        id: 'npm:extend:20180424'
+        path: polymer-cli > web-component-tester > wd > request > extend
+    - polymer-cli > polyserve > polymer-build > vinyl-fs > glob-stream > extend:
+        patched: '2024-10-23T19:03:10.072Z'
+        id: 'npm:extend:20180424'
+        path: >-
+          polymer-cli > polyserve > polymer-build > vinyl-fs > glob-stream >
+          extend
+    - polymer-cli > web-component-tester > wct-local > selenium-standalone > request > extend:
+        patched: '2024-10-23T19:03:10.072Z'
+        id: 'npm:extend:20180424'
+        path: >-
+          polymer-cli > web-component-tester > wct-local > selenium-standalone >
+          request > extend
+    - polymer-cli > web-component-tester > polyserve > polymer-build > vinyl-fs > glob-stream > extend:
+        patched: '2024-10-23T19:03:10.072Z'
+        id: 'npm:extend:20180424'
+        path: >-
+          polymer-cli > web-component-tester > polyserve > polymer-build >
+          vinyl-fs > glob-stream > extend
+    - polymer-cli > web-component-tester > wct-local > launchpad > browserstack > https-proxy-agent > extend:
+        patched: '2024-10-23T19:03:10.072Z'
+        id: 'npm:extend:20180424'
+        path: >-
+          polymer-cli > web-component-tester > wct-local > launchpad >
+          browserstack > https-proxy-agent > extend
+    - polymer-cli > web-component-tester > wct-local > launchpad > browserstack > https-proxy-agent > agent-base > extend:
+        patched: '2024-10-23T19:03:10.072Z'
+        id: 'npm:extend:20180424'
+        path: >-
+          polymer-cli > web-component-tester > wct-local > launchpad >
+          browserstack > https-proxy-agent > agent-base > extend
+  'npm:hoek:20180212':
+    - polymer-cli > web-component-tester > wct-local > selenium-standalone > request > hawk > hoek:
+        patched: '2024-10-23T19:03:10.072Z'
+        id: 'npm:hoek:20180212'
+        path: >-
+          polymer-cli > web-component-tester > wct-local > selenium-standalone >
+          request > hawk > hoek
+    - polymer-cli > web-component-tester > wct-local > selenium-standalone > request > hawk > boom > hoek:
+        patched: '2024-10-23T19:03:10.072Z'
+        id: 'npm:hoek:20180212'
+        path: >-
+          polymer-cli > web-component-tester > wct-local > selenium-standalone >
+          request > hawk > boom > hoek
+    - polymer-cli > web-component-tester > wct-local > selenium-standalone > request > hawk > sntp > hoek:
+        patched: '2024-10-23T19:03:10.072Z'
+        id: 'npm:hoek:20180212'
+        path: >-
+          polymer-cli > web-component-tester > wct-local > selenium-standalone >
+          request > hawk > sntp > hoek
+    - polymer-cli > web-component-tester > wct-local > selenium-standalone > request > hawk > cryptiles > boom > hoek:
+        patched: '2024-10-23T19:03:10.072Z'
+        id: 'npm:hoek:20180212'
+        path: >-
+          polymer-cli > web-component-tester > wct-local > selenium-standalone >
+          request > hawk > cryptiles > boom > hoek
+  SNYK-JS-HTTPSPROXYAGENT-469131:
+    - polymer-cli > web-component-tester > wct-sauce > sauce-connect-launcher > https-proxy-agent:
+        patched: '2024-10-23T19:03:10.072Z'
+        id: SNYK-JS-HTTPSPROXYAGENT-469131
+        path: >-
+          polymer-cli > web-component-tester > wct-sauce >
+          sauce-connect-launcher > https-proxy-agent
+  SNYK-JS-LODASH-567746:
+    - gulp-eslint > eslint > lodash:
+        patched: '2024-10-23T19:03:10.072Z'
+        id: SNYK-JS-LODASH-567746
+        path: gulp-eslint > eslint > lodash
+    - polymer-cli > inquirer > lodash:
+        patched: '2024-10-23T19:03:10.072Z'
+        id: SNYK-JS-LODASH-567746
+        path: polymer-cli > inquirer > lodash
+    - polymer-cli > yeoman-environment > lodash:
+        patched: '2024-10-23T19:03:10.072Z'
+        id: SNYK-JS-LODASH-567746
+        path: polymer-cli > yeoman-environment > lodash
+    - polymer-cli > yeoman-generator > lodash:
+        patched: '2024-10-23T19:03:10.072Z'
+        id: SNYK-JS-LODASH-567746
+        path: polymer-cli > yeoman-generator > lodash
+    - polymer-cli > polymer-linter > babel-types > lodash:
+        patched: '2024-10-23T19:03:10.072Z'
+        id: SNYK-JS-LODASH-567746
+        path: polymer-cli > polymer-linter > babel-types > lodash
+    - polymer-cli > polymer-bundler > babel-generator > lodash:
+        patched: '2024-10-23T19:03:10.072Z'
+        id: SNYK-JS-LODASH-567746
+        path: polymer-cli > polymer-bundler > babel-generator > lodash
+    - polymer-cli > polymer-bundler > babel-traverse > lodash:
+        patched: '2024-10-23T19:03:10.072Z'
+        id: SNYK-JS-LODASH-567746
+        path: polymer-cli > polymer-bundler > babel-traverse > lodash
+    - polymer-cli > polymer-linter > babel-traverse > lodash:
+        patched: '2024-10-23T19:03:10.072Z'
+        id: SNYK-JS-LODASH-567746
+        path: polymer-cli > polymer-linter > babel-traverse > lodash
+    - gulp-eslint > eslint > inquirer > lodash:
+        patched: '2024-10-23T19:03:10.072Z'
+        id: SNYK-JS-LODASH-567746
+        path: gulp-eslint > eslint > inquirer > lodash
+    - gulp-eslint > eslint > table > lodash:
+        patched: '2024-10-23T19:03:10.072Z'
+        id: SNYK-JS-LODASH-567746
+        path: gulp-eslint > eslint > table > lodash
+    - polymer-cli > yeoman-environment > inquirer > lodash:
+        patched: '2024-10-23T19:03:10.072Z'
+        id: SNYK-JS-LODASH-567746
+        path: polymer-cli > yeoman-environment > inquirer > lodash
+    - polymer-cli > polymer-analyzer > @babel/traverse > lodash:
+        patched: '2024-10-23T19:03:10.072Z'
+        id: SNYK-JS-LODASH-567746
+        path: polymer-cli > polymer-analyzer > @babel/traverse > lodash
+    - polymer-cli > polymer-build > @babel/plugin-transform-block-scoping > lodash:
+        patched: '2024-10-23T19:03:10.072Z'
+        id: SNYK-JS-LODASH-567746
+        path: >-
+          polymer-cli > polymer-build > @babel/plugin-transform-block-scoping >
+          lodash
+    - polymer-cli > polyserve > http-proxy-middleware > lodash:
+        patched: '2024-10-23T19:03:10.072Z'
+        id: SNYK-JS-LODASH-567746
+        path: polymer-cli > polyserve > http-proxy-middleware > lodash
+    - polymer-cli > web-component-tester > async > lodash:
+        patched: '2024-10-23T19:03:10.072Z'
+        id: SNYK-JS-LODASH-567746
+        path: polymer-cli > web-component-tester > async > lodash
+    - polymer-cli > yeoman-generator > async > lodash:
+        patched: '2024-10-23T19:03:10.072Z'
+        id: SNYK-JS-LODASH-567746
+        path: polymer-cli > yeoman-generator > async > lodash
+    - polymer-cli > yeoman-environment > grouped-queue > lodash:
+        patched: '2024-10-23T19:03:10.072Z'
+        id: SNYK-JS-LODASH-567746
+        path: polymer-cli > yeoman-environment > grouped-queue > lodash
+    - polymer-cli > yeoman-generator > yeoman-environment > lodash:
+        patched: '2024-10-23T19:03:10.072Z'
+        id: SNYK-JS-LODASH-567746
+        path: polymer-cli > yeoman-generator > yeoman-environment > lodash
+    - polymer-cli > polymer-bundler > babel-generator > babel-types > lodash:
+        patched: '2024-10-23T19:03:10.072Z'
+        id: SNYK-JS-LODASH-567746
+        path: polymer-cli > polymer-bundler > babel-generator > babel-types > lodash
+    - polymer-cli > polymer-bundler > babel-traverse > babel-types > lodash:
+        patched: '2024-10-23T19:03:10.072Z'
+        id: SNYK-JS-LODASH-567746
+        path: polymer-cli > polymer-bundler > babel-traverse > babel-types > lodash
+    - polymer-cli > polymer-linter > babel-traverse > babel-types > lodash:
+        patched: '2024-10-23T19:03:10.072Z'
+        id: SNYK-JS-LODASH-567746
+        path: polymer-cli > polymer-linter > babel-traverse > babel-types > lodash
+    - polymer-cli > polymer-build > polymer-bundler > babel-generator > lodash:
+        patched: '2024-10-23T19:03:10.072Z'
+        id: SNYK-JS-LODASH-567746
+        path: >-
+          polymer-cli > polymer-build > polymer-bundler > babel-generator >
+          lodash
+    - polymer-cli > polymer-build > polymer-bundler > babel-traverse > lodash:
+        patched: '2024-10-23T19:03:10.072Z'
+        id: SNYK-JS-LODASH-567746
+        path: >-
+          polymer-cli > polymer-build > polymer-bundler > babel-traverse >
+          lodash
+    - polymer-cli > yeoman-generator > yeoman-environment > inquirer > lodash:
+        patched: '2024-10-23T19:03:10.072Z'
+        id: SNYK-JS-LODASH-567746
+        path: >-
+          polymer-cli > yeoman-generator > yeoman-environment > inquirer >
+          lodash
+    - polymer-cli > polymer-analyzer > @babel/traverse > @babel/generator > lodash:
+        patched: '2024-10-23T19:03:10.072Z'
+        id: SNYK-JS-LODASH-567746
+        path: >-
+          polymer-cli > polymer-analyzer > @babel/traverse > @babel/generator >
+          lodash
+    - polymer-cli > polymer-build > @babel/plugin-transform-unicode-regex > @babel/helper-regex > lodash:
+        patched: '2024-10-23T19:03:10.072Z'
+        id: SNYK-JS-LODASH-567746
+        path: >-
+          polymer-cli > polymer-build > @babel/plugin-transform-unicode-regex >
+          @babel/helper-regex > lodash
+    - polymer-cli > polymer-bundler > polymer-analyzer > @babel/traverse > lodash:
+        patched: '2024-10-23T19:03:10.072Z'
+        id: SNYK-JS-LODASH-567746
+        path: >-
+          polymer-cli > polymer-bundler > polymer-analyzer > @babel/traverse >
+          lodash
+    - polymer-cli > polymer-build > polymer-analyzer > @babel/traverse > lodash:
+        patched: '2024-10-23T19:03:10.072Z'
+        id: SNYK-JS-LODASH-567746
+        path: >-
+          polymer-cli > polymer-build > polymer-analyzer > @babel/traverse >
+          lodash
+    - polymer-cli > polymer-linter > polymer-analyzer > @babel/traverse > lodash:
+        patched: '2024-10-23T19:03:10.072Z'
+        id: SNYK-JS-LODASH-567746
+        path: >-
+          polymer-cli > polymer-linter > polymer-analyzer > @babel/traverse >
+          lodash
+    - polymer-cli > polyserve > polymer-build > @babel/plugin-transform-block-scoping > lodash:
+        patched: '2024-10-23T19:03:10.072Z'
+        id: SNYK-JS-LODASH-567746
+        path: >-
+          polymer-cli > polyserve > polymer-build >
+          @babel/plugin-transform-block-scoping > lodash
+    - polymer-cli > web-component-tester > polyserve > http-proxy-middleware > lodash:
+        patched: '2024-10-23T19:03:10.072Z'
+        id: SNYK-JS-LODASH-567746
+        path: >-
+          polymer-cli > web-component-tester > polyserve > http-proxy-middleware
+          > lodash
+    - polymer-cli > web-component-tester > wct-local > selenium-standalone > lodash:
+        patched: '2024-10-23T19:03:10.072Z'
+        id: SNYK-JS-LODASH-567746
+        path: >-
+          polymer-cli > web-component-tester > wct-local > selenium-standalone >
+          lodash
+    - polymer-cli > web-component-tester > wct-sauce > sauce-connect-launcher > lodash:
+        patched: '2024-10-23T19:03:10.072Z'
+        id: SNYK-JS-LODASH-567746
+        path: >-
+          polymer-cli > web-component-tester > wct-sauce >
+          sauce-connect-launcher > lodash
+    - polymer-cli > web-component-tester > wd > archiver > lodash:
+        patched: '2024-10-23T19:03:10.072Z'
+        id: SNYK-JS-LODASH-567746
+        path: polymer-cli > web-component-tester > wd > archiver > lodash
+    - polymer-cli > yeoman-generator > yeoman-environment > grouped-queue > lodash:
+        patched: '2024-10-23T19:03:10.072Z'
+        id: SNYK-JS-LODASH-567746
+        path: >-
+          polymer-cli > yeoman-generator > yeoman-environment > grouped-queue >
+          lodash
+    - polymer-build > babel-plugin-transform-async-generator-functions > babel-helper-remap-async-to-generator > babel-helper-hoist-variables > babel-types > lodash:
+        patched: '2024-10-23T19:03:10.072Z'
+        id: SNYK-JS-LODASH-567746
+        path: >-
+          polymer-build > babel-plugin-transform-async-generator-functions >
+          babel-helper-remap-async-to-generator > babel-helper-hoist-variables >
+          babel-types > lodash
+    - polymer-build > babel-plugin-transform-async-to-generator > babel-helper-remap-async-to-generator > babel-helper-hoist-variables > babel-types > lodash:
+        patched: '2024-10-23T19:03:10.072Z'
+        id: SNYK-JS-LODASH-567746
+        path: >-
+          polymer-build > babel-plugin-transform-async-to-generator >
+          babel-helper-remap-async-to-generator > babel-helper-hoist-variables >
+          babel-types > lodash
+    - polymer-cli > polymer-build > polymer-bundler > babel-generator > babel-types > lodash:
+        patched: '2024-10-23T19:03:10.072Z'
+        id: SNYK-JS-LODASH-567746
+        path: >-
+          polymer-cli > polymer-build > polymer-bundler > babel-generator >
+          babel-types > lodash
+    - polymer-cli > polymer-build > polymer-bundler > babel-traverse > babel-types > lodash:
+        patched: '2024-10-23T19:03:10.072Z'
+        id: SNYK-JS-LODASH-567746
+        path: >-
+          polymer-cli > polymer-build > polymer-bundler > babel-traverse >
+          babel-types > lodash
+    - polymer-cli > polyserve > polymer-build > polymer-bundler > babel-generator > lodash:
+        patched: '2024-10-23T19:03:10.072Z'
+        id: SNYK-JS-LODASH-567746
+        path: >-
+          polymer-cli > polyserve > polymer-build > polymer-bundler >
+          babel-generator > lodash
+    - polymer-cli > polyserve > polymer-build > polymer-bundler > babel-traverse > lodash:
+        patched: '2024-10-23T19:03:10.072Z'
+        id: SNYK-JS-LODASH-567746
+        path: >-
+          polymer-cli > polyserve > polymer-build > polymer-bundler >
+          babel-traverse > lodash
+    - polymer-cli > polymer-analyzer > @babel/traverse > @babel/helper-function-name > @babel/template > lodash:
+        patched: '2024-10-23T19:03:10.072Z'
+        id: SNYK-JS-LODASH-567746
+        path: >-
+          polymer-cli > polymer-analyzer > @babel/traverse >
+          @babel/helper-function-name > @babel/template > lodash
+    - polymer-cli > polymer-build > @babel/plugin-transform-modules-amd > @babel/helper-module-transforms > @babel/helper-simple-access > lodash:
+        patched: '2024-10-23T19:03:10.072Z'
+        id: SNYK-JS-LODASH-567746
+        path: >-
+          polymer-cli > polymer-build > @babel/plugin-transform-modules-amd >
+          @babel/helper-module-transforms > @babel/helper-simple-access > lodash
+    - polymer-cli > polymer-bundler > polymer-analyzer > @babel/traverse > @babel/generator > lodash:
+        patched: '2024-10-23T19:03:10.072Z'
+        id: SNYK-JS-LODASH-567746
+        path: >-
+          polymer-cli > polymer-bundler > polymer-analyzer > @babel/traverse >
+          @babel/generator > lodash
+    - polymer-cli > polymer-build > polymer-analyzer > @babel/traverse > @babel/generator > lodash:
+        patched: '2024-10-23T19:03:10.072Z'
+        id: SNYK-JS-LODASH-567746
+        path: >-
+          polymer-cli > polymer-build > polymer-analyzer > @babel/traverse >
+          @babel/generator > lodash
+    - polymer-cli > polymer-linter > polymer-analyzer > @babel/traverse > @babel/generator > lodash:
+        patched: '2024-10-23T19:03:10.072Z'
+        id: SNYK-JS-LODASH-567746
+        path: >-
+          polymer-cli > polymer-linter > polymer-analyzer > @babel/traverse >
+          @babel/generator > lodash
+    - polymer-cli > polyserve > polymer-build > @babel/plugin-transform-unicode-regex > @babel/helper-regex > lodash:
+        patched: '2024-10-23T19:03:10.072Z'
+        id: SNYK-JS-LODASH-567746
+        path: >-
+          polymer-cli > polyserve > polymer-build >
+          @babel/plugin-transform-unicode-regex > @babel/helper-regex > lodash
+    - polymer-cli > polymer-build > polymer-bundler > polymer-analyzer > @babel/traverse > lodash:
+        patched: '2024-10-23T19:03:10.072Z'
+        id: SNYK-JS-LODASH-567746
+        path: >-
+          polymer-cli > polymer-build > polymer-bundler > polymer-analyzer >
+          @babel/traverse > lodash
+    - polymer-cli > polyserve > polymer-build > polymer-analyzer > @babel/traverse > lodash:
+        patched: '2024-10-23T19:03:10.072Z'
+        id: SNYK-JS-LODASH-567746
+        path: >-
+          polymer-cli > polyserve > polymer-build > polymer-analyzer >
+          @babel/traverse > lodash
+    - polymer-cli > web-component-tester > polyserve > polymer-build > @babel/plugin-transform-block-scoping > lodash:
+        patched: '2024-10-23T19:03:10.072Z'
+        id: SNYK-JS-LODASH-567746
+        path: >-
+          polymer-cli > web-component-tester > polyserve > polymer-build >
+          @babel/plugin-transform-block-scoping > lodash
+    - polymer-cli > web-component-tester > wct-local > launchpad > async > lodash:
+        patched: '2024-10-23T19:03:10.072Z'
+        id: SNYK-JS-LODASH-567746
+        path: >-
+          polymer-cli > web-component-tester > wct-local > launchpad > async >
+          lodash
+    - polymer-cli > web-component-tester > wct-local > selenium-standalone > async > lodash:
+        patched: '2024-10-23T19:03:10.072Z'
+        id: SNYK-JS-LODASH-567746
+        path: >-
+          polymer-cli > web-component-tester > wct-local > selenium-standalone >
+          async > lodash
+    - polymer-cli > web-component-tester > wct-sauce > sauce-connect-launcher > async > lodash:
+        patched: '2024-10-23T19:03:10.072Z'
+        id: SNYK-JS-LODASH-567746
+        path: >-
+          polymer-cli > web-component-tester > wct-sauce >
+          sauce-connect-launcher > async > lodash
+    - polymer-cli > web-component-tester > wd > archiver > async > lodash:
+        patched: '2024-10-23T19:03:10.072Z'
+        id: SNYK-JS-LODASH-567746
+        path: polymer-cli > web-component-tester > wd > archiver > async > lodash
+    - polymer-cli > web-component-tester > wd > archiver > archiver-utils > lodash:
+        patched: '2024-10-23T19:03:10.072Z'
+        id: SNYK-JS-LODASH-567746
+        path: >-
+          polymer-cli > web-component-tester > wd > archiver > archiver-utils >
+          lodash
+    - polymer-cli > web-component-tester > wd > archiver > zip-stream > lodash:
+        patched: '2024-10-23T19:03:10.072Z'
+        id: SNYK-JS-LODASH-567746
+        path: >-
+          polymer-cli > web-component-tester > wd > archiver > zip-stream >
+          lodash
+    - polymer-cli > polyserve > polymer-build > polymer-bundler > babel-generator > babel-types > lodash:
+        patched: '2024-10-23T19:03:10.072Z'
+        id: SNYK-JS-LODASH-567746
+        path: >-
+          polymer-cli > polyserve > polymer-build > polymer-bundler >
+          babel-generator > babel-types > lodash
+    - polymer-cli > polyserve > polymer-build > polymer-bundler > babel-traverse > babel-types > lodash:
+        patched: '2024-10-23T19:03:10.072Z'
+        id: SNYK-JS-LODASH-567746
+        path: >-
+          polymer-cli > polyserve > polymer-build > polymer-bundler >
+          babel-traverse > babel-types > lodash
+    - polymer-cli > web-component-tester > polyserve > polymer-build > polymer-bundler > babel-generator > lodash:
+        patched: '2024-10-23T19:03:10.072Z'
+        id: SNYK-JS-LODASH-567746
+        path: >-
+          polymer-cli > web-component-tester > polyserve > polymer-build >
+          polymer-bundler > babel-generator > lodash
+    - polymer-cli > web-component-tester > polyserve > polymer-build > polymer-bundler > babel-traverse > lodash:
+        patched: '2024-10-23T19:03:10.072Z'
+        id: SNYK-JS-LODASH-567746
+        path: >-
+          polymer-cli > web-component-tester > polyserve > polymer-build >
+          polymer-bundler > babel-traverse > lodash
+    - polymer-cli > polymer-bundler > polymer-analyzer > @babel/traverse > @babel/helper-function-name > @babel/template > lodash:
+        patched: '2024-10-23T19:03:10.072Z'
+        id: SNYK-JS-LODASH-567746
+        path: >-
+          polymer-cli > polymer-bundler > polymer-analyzer > @babel/traverse >
+          @babel/helper-function-name > @babel/template > lodash
+    - polymer-cli > polymer-build > polymer-analyzer > @babel/traverse > @babel/helper-function-name > @babel/template > lodash:
+        patched: '2024-10-23T19:03:10.072Z'
+        id: SNYK-JS-LODASH-567746
+        path: >-
+          polymer-cli > polymer-build > polymer-analyzer > @babel/traverse >
+          @babel/helper-function-name > @babel/template > lodash
+    - polymer-cli > polymer-linter > polymer-analyzer > @babel/traverse > @babel/helper-function-name > @babel/template > lodash:
+        patched: '2024-10-23T19:03:10.072Z'
+        id: SNYK-JS-LODASH-567746
+        path: >-
+          polymer-cli > polymer-linter > polymer-analyzer > @babel/traverse >
+          @babel/helper-function-name > @babel/template > lodash
+    - polymer-cli > polyserve > polymer-build > @babel/plugin-transform-modules-amd > @babel/helper-module-transforms > @babel/helper-simple-access > lodash:
+        patched: '2024-10-23T19:03:10.072Z'
+        id: SNYK-JS-LODASH-567746
+        path: >-
+          polymer-cli > polyserve > polymer-build >
+          @babel/plugin-transform-modules-amd > @babel/helper-module-transforms
+          > @babel/helper-simple-access > lodash
+    - polymer-cli > polymer-build > polymer-bundler > polymer-analyzer > @babel/traverse > @babel/generator > lodash:
+        patched: '2024-10-23T19:03:10.072Z'
+        id: SNYK-JS-LODASH-567746
+        path: >-
+          polymer-cli > polymer-build > polymer-bundler > polymer-analyzer >
+          @babel/traverse > @babel/generator > lodash
+    - polymer-cli > polyserve > polymer-build > polymer-analyzer > @babel/traverse > @babel/generator > lodash:
+        patched: '2024-10-23T19:03:10.072Z'
+        id: SNYK-JS-LODASH-567746
+        path: >-
+          polymer-cli > polyserve > polymer-build > polymer-analyzer >
+          @babel/traverse > @babel/generator > lodash
+    - polymer-cli > polymer-analyzer > @babel/traverse > @babel/helper-function-name > @babel/template > @babel/types > lodash:
+        patched: '2024-10-23T19:03:10.072Z'
+        id: SNYK-JS-LODASH-567746
+        path: >-
+          polymer-cli > polymer-analyzer > @babel/traverse >
+          @babel/helper-function-name > @babel/template > @babel/types > lodash
+    - polymer-cli > web-component-tester > polyserve > polymer-build > @babel/plugin-transform-unicode-regex > @babel/helper-regex > lodash:
+        patched: '2024-10-23T19:03:10.072Z'
+        id: SNYK-JS-LODASH-567746
+        path: >-
+          polymer-cli > web-component-tester > polyserve > polymer-build >
+          @babel/plugin-transform-unicode-regex > @babel/helper-regex > lodash
+    - polymer-cli > polyserve > polymer-build > polymer-bundler > polymer-analyzer > @babel/traverse > lodash:
+        patched: '2024-10-23T19:03:10.072Z'
+        id: SNYK-JS-LODASH-567746
+        path: >-
+          polymer-cli > polyserve > polymer-build > polymer-bundler >
+          polymer-analyzer > @babel/traverse > lodash
+    - polymer-cli > web-component-tester > polyserve > polymer-build > polymer-analyzer > @babel/traverse > lodash:
+        patched: '2024-10-23T19:03:10.072Z'
+        id: SNYK-JS-LODASH-567746
+        path: >-
+          polymer-cli > web-component-tester > polyserve > polymer-build >
+          polymer-analyzer > @babel/traverse > lodash
+    - polymer-cli > web-component-tester > wd > archiver > zip-stream > archiver-utils > lodash:
+        patched: '2024-10-23T19:03:10.072Z'
+        id: SNYK-JS-LODASH-567746
+        path: >-
+          polymer-cli > web-component-tester > wd > archiver > zip-stream >
+          archiver-utils > lodash
+    - polymer-cli > web-component-tester > polyserve > polymer-build > polymer-bundler > babel-generator > babel-types > lodash:
+        patched: '2024-10-23T19:03:10.072Z'
+        id: SNYK-JS-LODASH-567746
+        path: >-
+          polymer-cli > web-component-tester > polyserve > polymer-build >
+          polymer-bundler > babel-generator > babel-types > lodash
+    - polymer-cli > web-component-tester > polyserve > polymer-build > polymer-bundler > babel-traverse > babel-types > lodash:
+        patched: '2024-10-23T19:03:10.072Z'
+        id: SNYK-JS-LODASH-567746
+        path: >-
+          polymer-cli > web-component-tester > polyserve > polymer-build >
+          polymer-bundler > babel-traverse > babel-types > lodash
+    - polymer-cli > polymer-build > polymer-bundler > polymer-analyzer > @babel/traverse > @babel/helper-function-name > @babel/template > lodash:
+        patched: '2024-10-23T19:03:10.072Z'
+        id: SNYK-JS-LODASH-567746
+        path: >-
+          polymer-cli > polymer-build > polymer-bundler > polymer-analyzer >
+          @babel/traverse > @babel/helper-function-name > @babel/template >
+          lodash
+    - polymer-cli > polyserve > polymer-build > polymer-analyzer > @babel/traverse > @babel/helper-function-name > @babel/template > lodash:
+        patched: '2024-10-23T19:03:10.072Z'
+        id: SNYK-JS-LODASH-567746
+        path: >-
+          polymer-cli > polyserve > polymer-build > polymer-analyzer >
+          @babel/traverse > @babel/helper-function-name > @babel/template >
+          lodash
+    - polymer-cli > web-component-tester > polyserve > polymer-build > @babel/plugin-transform-modules-amd > @babel/helper-module-transforms > @babel/helper-simple-access > lodash:
+        patched: '2024-10-23T19:03:10.072Z'
+        id: SNYK-JS-LODASH-567746
+        path: >-
+          polymer-cli > web-component-tester > polyserve > polymer-build >
+          @babel/plugin-transform-modules-amd > @babel/helper-module-transforms
+          > @babel/helper-simple-access > lodash
+    - polymer-cli > polyserve > polymer-build > polymer-bundler > polymer-analyzer > @babel/traverse > @babel/generator > lodash:
+        patched: '2024-10-23T19:03:10.072Z'
+        id: SNYK-JS-LODASH-567746
+        path: >-
+          polymer-cli > polyserve > polymer-build > polymer-bundler >
+          polymer-analyzer > @babel/traverse > @babel/generator > lodash
+    - polymer-cli > web-component-tester > polyserve > polymer-build > polymer-analyzer > @babel/traverse > @babel/generator > lodash:
+        patched: '2024-10-23T19:03:10.072Z'
+        id: SNYK-JS-LODASH-567746
+        path: >-
+          polymer-cli > web-component-tester > polyserve > polymer-build >
+          polymer-analyzer > @babel/traverse > @babel/generator > lodash
+    - polymer-cli > polymer-bundler > polymer-analyzer > @babel/traverse > @babel/helper-function-name > @babel/template > @babel/types > lodash:
+        patched: '2024-10-23T19:03:10.072Z'
+        id: SNYK-JS-LODASH-567746
+        path: >-
+          polymer-cli > polymer-bundler > polymer-analyzer > @babel/traverse >
+          @babel/helper-function-name > @babel/template > @babel/types > lodash
+    - polymer-cli > polymer-build > polymer-analyzer > @babel/traverse > @babel/helper-function-name > @babel/template > @babel/types > lodash:
+        patched: '2024-10-23T19:03:10.072Z'
+        id: SNYK-JS-LODASH-567746
+        path: >-
+          polymer-cli > polymer-build > polymer-analyzer > @babel/traverse >
+          @babel/helper-function-name > @babel/template > @babel/types > lodash
+    - polymer-cli > polymer-linter > polymer-analyzer > @babel/traverse > @babel/helper-function-name > @babel/template > @babel/types > lodash:
+        patched: '2024-10-23T19:03:10.072Z'
+        id: SNYK-JS-LODASH-567746
+        path: >-
+          polymer-cli > polymer-linter > polymer-analyzer > @babel/traverse >
+          @babel/helper-function-name > @babel/template > @babel/types > lodash
+    - polymer-cli > web-component-tester > polyserve > polymer-build > polymer-bundler > polymer-analyzer > @babel/traverse > lodash:
+        patched: '2024-10-23T19:03:10.072Z'
+        id: SNYK-JS-LODASH-567746
+        path: >-
+          polymer-cli > web-component-tester > polyserve > polymer-build >
+          polymer-bundler > polymer-analyzer > @babel/traverse > lodash
+    - polymer-cli > polyserve > polymer-build > polymer-bundler > polymer-analyzer > @babel/traverse > @babel/helper-function-name > @babel/template > lodash:
+        patched: '2024-10-23T19:03:10.072Z'
+        id: SNYK-JS-LODASH-567746
+        path: >-
+          polymer-cli > polyserve > polymer-build > polymer-bundler >
+          polymer-analyzer > @babel/traverse > @babel/helper-function-name >
+          @babel/template > lodash
+    - polymer-cli > web-component-tester > polyserve > polymer-build > polymer-analyzer > @babel/traverse > @babel/helper-function-name > @babel/template > lodash:
+        patched: '2024-10-23T19:03:10.072Z'
+        id: SNYK-JS-LODASH-567746
+        path: >-
+          polymer-cli > web-component-tester > polyserve > polymer-build >
+          polymer-analyzer > @babel/traverse > @babel/helper-function-name >
+          @babel/template > lodash
+    - polymer-cli > polymer-build > @babel/plugin-transform-classes > @babel/helper-replace-supers > @babel/traverse > @babel/helper-function-name > @babel/template > @babel/types > lodash:
+        patched: '2024-10-23T19:03:10.072Z'
+        id: SNYK-JS-LODASH-567746
+        path: >-
+          polymer-cli > polymer-build > @babel/plugin-transform-classes >
+          @babel/helper-replace-supers > @babel/traverse >
+          @babel/helper-function-name > @babel/template > @babel/types > lodash
+    - polymer-cli > web-component-tester > polyserve > polymer-build > polymer-bundler > polymer-analyzer > @babel/traverse > @babel/generator > lodash:
+        patched: '2024-10-23T19:03:10.072Z'
+        id: SNYK-JS-LODASH-567746
+        path: >-
+          polymer-cli > web-component-tester > polyserve > polymer-build >
+          polymer-bundler > polymer-analyzer > @babel/traverse >
+          @babel/generator > lodash
+    - polymer-cli > polymer-build > polymer-bundler > polymer-analyzer > @babel/traverse > @babel/helper-function-name > @babel/template > @babel/types > lodash:
+        patched: '2024-10-23T19:03:10.072Z'
+        id: SNYK-JS-LODASH-567746
+        path: >-
+          polymer-cli > polymer-build > polymer-bundler > polymer-analyzer >
+          @babel/traverse > @babel/helper-function-name > @babel/template >
+          @babel/types > lodash
+    - polymer-cli > polyserve > polymer-build > polymer-analyzer > @babel/traverse > @babel/helper-function-name > @babel/template > @babel/types > lodash:
+        patched: '2024-10-23T19:03:10.072Z'
+        id: SNYK-JS-LODASH-567746
+        path: >-
+          polymer-cli > polyserve > polymer-build > polymer-analyzer >
+          @babel/traverse > @babel/helper-function-name > @babel/template >
+          @babel/types > lodash
+    - polymer-cli > web-component-tester > polyserve > polymer-build > polymer-bundler > polymer-analyzer > @babel/traverse > @babel/helper-function-name > @babel/template > lodash:
+        patched: '2024-10-23T19:03:10.072Z'
+        id: SNYK-JS-LODASH-567746
+        path: >-
+          polymer-cli > web-component-tester > polyserve > polymer-build >
+          polymer-bundler > polymer-analyzer > @babel/traverse >
+          @babel/helper-function-name > @babel/template > lodash
+    - polymer-cli > polyserve > polymer-build > @babel/plugin-transform-classes > @babel/helper-replace-supers > @babel/traverse > @babel/helper-function-name > @babel/template > @babel/types > lodash:
+        patched: '2024-10-23T19:03:10.072Z'
+        id: SNYK-JS-LODASH-567746
+        path: >-
+          polymer-cli > polyserve > polymer-build >
+          @babel/plugin-transform-classes > @babel/helper-replace-supers >
+          @babel/traverse > @babel/helper-function-name > @babel/template >
+          @babel/types > lodash
+    - polymer-cli > polyserve > polymer-build > polymer-bundler > polymer-analyzer > @babel/traverse > @babel/helper-function-name > @babel/template > @babel/types > lodash:
+        patched: '2024-10-23T19:03:10.072Z'
+        id: SNYK-JS-LODASH-567746
+        path: >-
+          polymer-cli > polyserve > polymer-build > polymer-bundler >
+          polymer-analyzer > @babel/traverse > @babel/helper-function-name >
+          @babel/template > @babel/types > lodash
+    - polymer-cli > web-component-tester > polyserve > polymer-build > polymer-analyzer > @babel/traverse > @babel/helper-function-name > @babel/template > @babel/types > lodash:
+        patched: '2024-10-23T19:03:10.072Z'
+        id: SNYK-JS-LODASH-567746
+        path: >-
+          polymer-cli > web-component-tester > polyserve > polymer-build >
+          polymer-analyzer > @babel/traverse > @babel/helper-function-name >
+          @babel/template > @babel/types > lodash
+    - polymer-cli > polymer-build > @babel/plugin-transform-exponentiation-operator > @babel/helper-builder-binary-assignment-operator-visitor > @babel/helper-explode-assignable-expression > @babel/traverse > @babel/helper-function-name > @babel/template > @babel/types > lodash:
+        patched: '2024-10-23T19:03:10.072Z'
+        id: SNYK-JS-LODASH-567746
+        path: >-
+          polymer-cli > polymer-build >
+          @babel/plugin-transform-exponentiation-operator >
+          @babel/helper-builder-binary-assignment-operator-visitor >
+          @babel/helper-explode-assignable-expression > @babel/traverse >
+          @babel/helper-function-name > @babel/template > @babel/types > lodash
+    - polymer-cli > web-component-tester > polyserve > polymer-build > @babel/plugin-transform-classes > @babel/helper-replace-supers > @babel/traverse > @babel/helper-function-name > @babel/template > @babel/types > lodash:
+        patched: '2024-10-23T19:03:10.072Z'
+        id: SNYK-JS-LODASH-567746
+        path: >-
+          polymer-cli > web-component-tester > polyserve > polymer-build >
+          @babel/plugin-transform-classes > @babel/helper-replace-supers >
+          @babel/traverse > @babel/helper-function-name > @babel/template >
+          @babel/types > lodash
+    - polymer-cli > web-component-tester > polyserve > polymer-build > polymer-bundler > polymer-analyzer > @babel/traverse > @babel/helper-function-name > @babel/template > @babel/types > lodash:
+        patched: '2024-10-23T19:03:10.072Z'
+        id: SNYK-JS-LODASH-567746
+        path: >-
+          polymer-cli > web-component-tester > polyserve > polymer-build >
+          polymer-bundler > polymer-analyzer > @babel/traverse >
+          @babel/helper-function-name > @babel/template > @babel/types > lodash
+    - polymer-cli > polyserve > polymer-build > @babel/plugin-transform-exponentiation-operator > @babel/helper-builder-binary-assignment-operator-visitor > @babel/helper-explode-assignable-expression > @babel/traverse > @babel/helper-function-name > @babel/template > @babel/types > lodash:
+        patched: '2024-10-23T19:03:10.072Z'
+        id: SNYK-JS-LODASH-567746
+        path: >-
+          polymer-cli > polyserve > polymer-build >
+          @babel/plugin-transform-exponentiation-operator >
+          @babel/helper-builder-binary-assignment-operator-visitor >
+          @babel/helper-explode-assignable-expression > @babel/traverse >
+          @babel/helper-function-name > @babel/template > @babel/types > lodash
+    - polymer-cli > web-component-tester > polyserve > polymer-build > @babel/plugin-transform-exponentiation-operator > @babel/helper-builder-binary-assignment-operator-visitor > @babel/helper-explode-assignable-expression > @babel/traverse > @babel/helper-function-name > @babel/template > @babel/types > lodash:
+        patched: '2024-10-23T19:03:10.072Z'
+        id: SNYK-JS-LODASH-567746
+        path: >-
+          polymer-cli > web-component-tester > polyserve > polymer-build >
+          @babel/plugin-transform-exponentiation-operator >
+          @babel/helper-builder-binary-assignment-operator-visitor >
+          @babel/helper-explode-assignable-expression > @babel/traverse >
+          @babel/helper-function-name > @babel/template > @babel/types > lodash
+    - polymer-cli > web-component-tester > wd > lodash:
+        patched: '2024-10-23T19:03:10.072Z'
+        id: SNYK-JS-LODASH-567746
+        path: polymer-cli > web-component-tester > wd > lodash
+    - polymer-cli > web-component-tester > wd > async > lodash:
+        patched: '2024-10-23T19:03:10.072Z'
+        id: SNYK-JS-LODASH-567746
+        path: polymer-cli > web-component-tester > wd > async > lodash
+  'npm:lodash:20180130':
+    - wct-browser-legacy > lodash:
+        patched: '2024-10-23T19:03:10.072Z'
+        id: 'npm:lodash:20180130'
+        path: wct-browser-legacy > lodash
+    - wct-browser-legacy > stacky > lodash:
+        patched: '2024-10-23T19:03:10.072Z'
+        id: 'npm:lodash:20180130'
+        path: wct-browser-legacy > stacky > lodash
+    - polymer-cli > web-component-tester > lodash:
+        patched: '2024-10-23T19:03:10.072Z'
+        id: 'npm:lodash:20180130'
+        path: polymer-cli > web-component-tester > lodash
+    - polymer-cli > web-component-tester > stacky > lodash:
+        patched: '2024-10-23T19:03:10.072Z'
+        id: 'npm:lodash:20180130'
+        path: polymer-cli > web-component-tester > stacky > lodash
+    - polymer-cli > web-component-tester > wct-sauce > lodash:
+        patched: '2024-10-23T19:03:10.072Z'
+        id: 'npm:lodash:20180130'
+        path: polymer-cli > web-component-tester > wct-sauce > lodash
+  'npm:mime:20170907':
+    - polymer-cli > web-component-tester > send > mime:
+        patched: '2024-10-23T19:03:10.072Z'
+        id: 'npm:mime:20170907'
+        path: polymer-cli > web-component-tester > send > mime
+  'npm:ms:20151024':
+    - polymer-cli > web-component-tester > send > ms:
+        patched: '2024-10-23T19:03:10.072Z'
+        id: 'npm:ms:20151024'
+        path: polymer-cli > web-component-tester > send > ms
+    - polymer-cli > web-component-tester > send > debug > ms:
+        patched: '2024-10-23T19:03:10.072Z'
+        id: 'npm:ms:20151024'
+        path: polymer-cli > web-component-tester > send > debug > ms
+  'npm:stringstream:20180511':
+    - polymer-cli > request > stringstream:
+        patched: '2024-10-23T19:03:10.072Z'
+        id: 'npm:stringstream:20180511'
+        path: polymer-cli > request > stringstream
+    - polymer-cli > web-component-tester > wd > request > stringstream:
+        patched: '2024-10-23T19:03:10.072Z'
+        id: 'npm:stringstream:20180511'
+        path: polymer-cli > web-component-tester > wd > request > stringstream
+    - polymer-cli > web-component-tester > wct-local > selenium-standalone > request > stringstream:
+        patched: '2024-10-23T19:03:10.072Z'
+        id: 'npm:stringstream:20180511'
+        path: >-
+          polymer-cli > web-component-tester > wct-local > selenium-standalone >
+          request > stringstream
+  'npm:tunnel-agent:20170305':
+    - polymer-cli > web-component-tester > wct-local > selenium-standalone > request > tunnel-agent:
+        patched: '2024-10-23T19:03:10.072Z'
+        id: 'npm:tunnel-agent:20170305'
+        path: >-
+          polymer-cli > web-component-tester > wct-local > selenium-standalone >
+          request > tunnel-agent
