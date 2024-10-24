@@ -11,7 +11,7 @@
   ],
   "homepage": "http://inikulin.github.io/parse5/",
   "devDependencies": {
-    "mocha": "1.21.4"
+    "mocha": "10.1.0"
   },
   "keywords": [
     "html",
@@ -42,6 +42,12 @@
     "url": "git://github.com/inikulin/parse5.git"
   },
   "scripts": {
-    "test": "node test/run_tests.js"
+    "test": "node test/run_tests.js",
+    "prepublish": "npm run snyk-protect",
+    "snyk-protect": "snyk-protect"
+  },
+  "snyk": true,
+  "dependencies": {
+    "@snyk/protect": "latest"
   }
 }
