@@ -65,6 +65,16 @@ REPOSITORY_HOST_MAPPING = [{
     'public_host': None,
     'internal_host': 'https://devtools-frontend-perf.corp.goog',
     'masters': ['client.devtools-frontend.integration']
+}, {
+    'label': 'Fuchsia Internal',
+    'public_host': None,
+    'internal_host': 'https://fuchsia-perf.corp.goog',
+    'masters': ['fuchsia.global.ci', 'turquoise-internal.integration.global.ci']
+}, {
+    'label': 'Fuchsia Public',
+    'public_host': 'https://fuchsia-perf.luci.app',
+    'internal_host': None,
+    'masters': ['fuchsia.global.ci']
 }]
 
 QUERY_TEST_LIMIT = 5
@@ -141,6 +151,16 @@ def GetSkiaUrlForAnomaly(anomaly: graph_data.anomaly.Anomaly) -> str:
     return '%s/_/anomaly?key=%s' % (host, six.ensure_str(anomaly.key.urlsafe()))
 
   return ''
+
+
+def GetMastersAndInternalOnlyForHost(host: str):
+  for repo_map in REPOSITORY_HOST_MAPPING:
+    if repo_map.get('public_host') == host:
+      return repo_map.get('masters', []), False
+    if repo_map.get('internal_host') == host:
+      return repo_map.get('masters', []), True
+
+  return [], True
 
 
 def _GetRepoMapForMaster(master: str):
