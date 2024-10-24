@@ -1,0 +1,122 @@
+# Snyk (https://snyk.io) policy file, patches or ignores known vulnerabilities.
+version: v1.25.1
+ignore: {}
+# patches apply the minimum changes required to fix a vulnerability
+patch:
+  'npm:debug:20170905':
+    - web-component-tester > socket.io > socket.io-parser > debug:
+        patched: '2024-10-24T21:49:50.015Z'
+        id: 'npm:debug:20170905'
+        path: web-component-tester > socket.io > socket.io-parser > debug
+    - web-component-tester > socket.io > socket.io-client > socket.io-parser > debug:
+        patched: '2024-10-24T21:49:50.015Z'
+        id: 'npm:debug:20170905'
+        path: >-
+          web-component-tester > socket.io > socket.io-client > socket.io-parser
+          > debug
+    - web-component-tester > socket.io > debug:
+        patched: '2024-10-24T21:49:50.015Z'
+        id: 'npm:debug:20170905'
+        path: web-component-tester > socket.io > debug
+    - web-component-tester > socket.io > engine.io > debug:
+        patched: '2024-10-24T21:49:50.015Z'
+        id: 'npm:debug:20170905'
+        path: web-component-tester > socket.io > engine.io > debug
+    - web-component-tester > socket.io > socket.io-adapter > debug:
+        patched: '2024-10-24T21:49:50.015Z'
+        id: 'npm:debug:20170905'
+        path: web-component-tester > socket.io > socket.io-adapter > debug
+    - web-component-tester > socket.io > socket.io-client > debug:
+        patched: '2024-10-24T21:49:50.015Z'
+        id: 'npm:debug:20170905'
+        path: web-component-tester > socket.io > socket.io-client > debug
+    - web-component-tester > socket.io > socket.io-client > engine.io-client > debug:
+        patched: '2024-10-24T21:49:50.015Z'
+        id: 'npm:debug:20170905'
+        path: >-
+          web-component-tester > socket.io > socket.io-client > engine.io-client
+          > debug
+  'npm:hawk:20160119':
+    - web-component-tester > wd > request > hawk:
+        patched: '2024-10-24T21:49:50.015Z'
+        id: 'npm:hawk:20160119'
+        path: web-component-tester > wd > request > hawk
+  'npm:hoek:20180212':
+    - web-component-tester > wd > request > hawk > hoek:
+        patched: '2024-10-24T21:49:50.015Z'
+        id: 'npm:hoek:20180212'
+        path: web-component-tester > wd > request > hawk > hoek
+    - web-component-tester > wd > request > hawk > boom > hoek:
+        patched: '2024-10-24T21:49:50.015Z'
+        id: 'npm:hoek:20180212'
+        path: web-component-tester > wd > request > hawk > boom > hoek
+    - web-component-tester > wd > request > hawk > sntp > hoek:
+        patched: '2024-10-24T21:49:50.015Z'
+        id: 'npm:hoek:20180212'
+        path: web-component-tester > wd > request > hawk > sntp > hoek
+    - web-component-tester > wd > request > hawk > cryptiles > boom > hoek:
+        patched: '2024-10-24T21:49:50.015Z'
+        id: 'npm:hoek:20180212'
+        path: web-component-tester > wd > request > hawk > cryptiles > boom > hoek
+  'npm:http-signature:20150122':
+    - web-component-tester > wd > request > http-signature:
+        patched: '2024-10-24T21:49:50.015Z'
+        id: 'npm:http-signature:20150122'
+        path: web-component-tester > wd > request > http-signature
+  'npm:lodash:20180130':
+    - web-component-tester > lodash:
+        patched: '2024-10-24T21:49:50.015Z'
+        id: 'npm:lodash:20180130'
+        path: web-component-tester > lodash
+    - web-component-tester > stacky > lodash:
+        patched: '2024-10-24T21:49:50.015Z'
+        id: 'npm:lodash:20180130'
+        path: web-component-tester > stacky > lodash
+    - web-component-tester > wct-sauce > lodash:
+        patched: '2024-10-24T21:49:50.015Z'
+        id: 'npm:lodash:20180130'
+        path: web-component-tester > wct-sauce > lodash
+  'npm:minimatch:20160620':
+    - web-component-tester > wd > archiver > glob > minimatch:
+        patched: '2024-10-24T21:49:50.015Z'
+        id: 'npm:minimatch:20160620'
+        path: web-component-tester > wd > archiver > glob > minimatch
+  'npm:ms:20170412':
+    - web-component-tester > socket.io > socket.io-parser > debug > ms:
+        patched: '2024-10-24T21:49:50.015Z'
+        id: 'npm:ms:20170412'
+        path: web-component-tester > socket.io > socket.io-parser > debug > ms
+    - web-component-tester > socket.io > socket.io-client > socket.io-parser > debug > ms:
+        patched: '2024-10-24T21:49:50.015Z'
+        id: 'npm:ms:20170412'
+        path: >-
+          web-component-tester > socket.io > socket.io-client > socket.io-parser
+          > debug > ms
+    - web-component-tester > socket.io > engine.io > debug > ms:
+        patched: '2024-10-24T21:49:50.015Z'
+        id: 'npm:ms:20170412'
+        path: web-component-tester > socket.io > engine.io > debug > ms
+    - web-component-tester > socket.io > socket.io-adapter > debug > ms:
+        patched: '2024-10-24T21:49:50.015Z'
+        id: 'npm:ms:20170412'
+        path: web-component-tester > socket.io > socket.io-adapter > debug > ms
+    - web-component-tester > socket.io > socket.io-client > debug > ms:
+        patched: '2024-10-24T21:49:50.015Z'
+        id: 'npm:ms:20170412'
+        path: web-component-tester > socket.io > socket.io-client > debug > ms
+    - web-component-tester > socket.io > socket.io-client > engine.io-client > debug > ms:
+        patched: '2024-10-24T21:49:50.015Z'
+        id: 'npm:ms:20170412'
+        path: >-
+          web-component-tester > socket.io > socket.io-client > engine.io-client
+          > debug > ms
+  'npm:request:20160119':
+    - web-component-tester > wd > request:
+        patched: '2024-10-24T21:49:50.015Z'
+        id: 'npm:request:20160119'
+        path: web-component-tester > wd > request
+  'npm:tunnel-agent:20170305':
+    - web-component-tester > wd > request > tunnel-agent:
+        patched: '2024-10-24T21:49:50.015Z'
+        id: 'npm:tunnel-agent:20170305'
+        path: web-component-tester > wd > request > tunnel-agent
