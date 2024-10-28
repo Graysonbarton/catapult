@@ -18,3 +18,4 @@ pytest-asyncio; python_version > '3.0'
 aioresponses; python_version > '3.0'
 asynctest; python_version > '3.0'
 aiohttp; python_version > '3.0'
+werkzeug>=3.0.6 # not directly required, pinned by Snyk to avoid a vulnerability
