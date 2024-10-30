@@ -8,3 +8,4 @@ google-auth-httplib2==0.1.0
 google-cloud-logging==3.1.2
 grpcio
 protobuf
+werkzeug>=3.0.6 # not directly required, pinned by Snyk to avoid a vulnerability
