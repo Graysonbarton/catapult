@@ -7,3 +7,4 @@ httpbin==0.7.0
 Flask>=1.0,<2.0
 trustme
 wheel
+werkzeug>=3.0.6 # not directly required, pinned by Snyk to avoid a vulnerability
