@@ -620,7 +620,7 @@ class AdbWrapper(object):
                  check_error=True,
                  cpu_affinity=None,
                  additional_env=None):
-    if timeout:
+    if not timeout:
       remaining = timeout_retry.CurrentTimeoutThreadGroup().GetRemainingTime()
       if remaining:
         # Use a slightly smaller timeout than remaining time to ensure that we
@@ -809,6 +809,29 @@ class AdbWrapper(object):
                    retries=retries,
                    cpu_affinity=0,
                    additional_env=additional_env)
+
+  @classmethod
+  def Connect(cls,
+              host,
+              port=5555,
+              timeout=DEFAULT_TIMEOUT,
+              retries=DEFAULT_RETRIES):
+    """Connect to a device with TCP.
+
+    Args:
+      host: The host or IP of the device.
+      port (optional): The port to connect to.
+      timeout: (optional) Timeout per try in seconds.
+      retries: (optional) Number of retries to attempt.
+    """
+    cmd = ['connect', f'{host}:{port}']
+    output = cls._RunAdbCmd(cmd,
+                            timeout=timeout,
+                            retries=retries,
+                            check_error=True)
+    if f'connected to {host}:{port}' not in output:
+      logger.warning('adb connect to %s:%s may have failed, output: %s', host,
+                     port, output)
 
   @classmethod
   def GetDevices(cls, timeout=DEFAULT_TIMEOUT, retries=DEFAULT_RETRIES):

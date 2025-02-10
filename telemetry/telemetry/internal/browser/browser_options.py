@@ -102,11 +102,20 @@ class BrowserFinderOptions(argparse.Namespace):
 
     # Selection group
     group = parser.add_argument_group('Which browser to use')
+    # b/355218109 --browser=builder search for the Chrome binary where the
+    # Chrome binary it can find in the out/ folder. Traditionally, the browser
+    # type would've been release or debug, which would've mapped directly to
+    # out/Release or out/Debug. This has been changed to out/{hash}-{bot_name},
+    # and so browser will glob the out/ folder and match by regex.
+    # The path to the out/ folder is defined by --chrome-root, and builder is
+    # currently only supported for desktop.
     group.add_argument('--browser',
                        dest='browser_type',
-                       choices=['list', 'any'] +
+                       choices=['list', 'any', 'builder'] +
                        browser_finder.FindAllBrowserTypes(),
-                       help='Browser type to run, in order of priority.')
+                       help='Browser type to run, in order of priority. '
+                       'builder only supports desktop platforms and '
+                       'requires --chrome-root to be defined.')
     group.add_argument('--cast-receiver',
                        dest='cast_receiver_type',
                        choices=['list'] + cast_interface.CAST_BROWSERS,
@@ -270,6 +279,12 @@ class BrowserFinderOptions(argparse.Namespace):
         '--avd-config',
         help=('A path to an AVD configuration to use for starting an Android '
               'emulator.'))
+    group.add_argument('--assume-browser-already-installed',
+                       action='store_true',
+                       help='Skip running UpdateExecutableIfNeeded. This makes '
+                       'running 20+ benchmarks much faster (especially on '
+                       'android where UpdateExecutableIfNeeded can take '
+                       'minutes).')
 
     # Cast browser options
     group = parser.add_argument_group('Cast browser options')
@@ -284,25 +299,6 @@ class BrowserFinderOptions(argparse.Namespace):
                        help='IP address of the Cast device.')
 
     group = parser.add_argument_group('Fuchsia platform options')
-    group.add_argument(
-        '--fuchsia-ssh-config',
-        default=os.path.join(util.GetChromiumSrcDir(), 'build', 'fuchsia',
-                             'test', 'sshconfig'),
-        help='Specify the ssh_config file used to connect to the Fuchsia OS.')
-    group.add_argument('--fuchsia-device-address',
-                       help='The IP of the target Fuchsia device. Optional.')
-    group.add_argument(
-        '--fuchsia-ssh-port',
-        type=int,
-        help=('The port on the host to which the ssh service running on the '
-              'Fuchsia device was forwarded.'))
-    group.add_argument(
-        '--fuchsia-system-log-file',
-        help='The file where Fuchsia system logs will be stored.')
-    group.add_argument(
-        '--fuchsia-repo',
-        default='fuchsia.com',
-        help='The name of the Fuchsia repo used to serve required packages.')
     group.add_argument('--fuchsia-target-id',
                        help='The Fuchsia target id used by the ffx tool.')
 
@@ -438,7 +434,16 @@ class BrowserFinderOptions(argparse.Namespace):
       self.browser_options.UpdateFromParseResults(self)
 
       return ret
+
+    # This ideally wouldn't need to exist, but the spaghetti code left over from
+    # the use of optparse means that code exists that relies on attributes
+    # being set before argument parsing is actually done.
+    def get_default_values():
+      defaults, _ = real_parse([])
+      return defaults
+
     parser.parse_args = ParseArgs
+    parser.get_default_values = get_default_values
     return parser
 
   def IsBrowserTypeRelevant(self, browser_type):
@@ -780,6 +785,9 @@ class BrowserOptions():
       self._extra_browser_args.update(args)
     else:
       self._extra_browser_args.add(args)
+
+  def RemoveExtraBrowserArg(self, arg):
+    self._extra_browser_args.remove(arg)
 
   def ConsolidateValuesForArg(self, flag):
     """Consolidates values from multiple instances of a browser arg.

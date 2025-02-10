@@ -8,6 +8,7 @@ from dateutil import parser
 from flask import Blueprint, request, make_response
 import logging
 import json
+import math
 import uuid
 
 from common import cloud_metric, utils
@@ -32,6 +33,8 @@ ALLOWED_CLIENTS = [
     'perf-v8-internal@skia-infra-corp.iam.gserviceaccount.com',
     # Devtools-Frontend skia instance service account
     'perf-devtools-frontend@skia-infra-corp.iam.gserviceaccount.com',
+    # Fuchsia (internal) skia instance service account
+    'perf-fuchsia-internal@skia-infra-corp.iam.gserviceaccount.com',
 ]
 
 DATASTORE_TEST_BATCH_SIZE = 25
@@ -49,7 +52,9 @@ class AnomalyUpdateFailedException(Exception):
 class AnomalyData:
   test_path:str
   start_revision:int
+  start_revision_hash:str
   end_revision:int
+  end_revision_hash:str
   id:int
   timestamp:datetime.datetime
   bug_id:int
@@ -65,6 +70,11 @@ class AnomalyData:
   segment_size_after:int
   segment_size_before:int
   std_dev_before_anomaly:float
+  t_statistic: float
+  subscription_name: str
+  bug_component: str
+  bug_labels: list[str]
+  bug_cc_emails: list[str]
 
   def __init__(
       self,
@@ -103,7 +113,9 @@ def QueryAnomaliesPostHandler():
       return 'Malformed Json', 400
 
     client = datastore_client.DataStoreClient()
-    if data.get('revision', None):
+    if data.get('key', None):
+      anomalies = client.QueryAnomaliesForKey(data['key'])
+    elif data.get('revision', None):
       anomalies = client.QueryAnomaliesAroundRevision(int(data['revision']))
     else:
       is_valid, error = ValidateRequest(
@@ -173,7 +185,7 @@ def GetAnomalyHandler():
 def QueryAnomaliesByTimePostHandler():
   try:
     logging.info('Received query request with data %s', request.data)
-    is_authorized, _ = auth_helper.AuthorizeBearerToken(
+    is_authorized, client_email = auth_helper.AuthorizeBearerToken(
       request, ALLOWED_CLIENTS)
     if not is_authorized:
       return 'Unauthorized', 401
@@ -207,6 +219,17 @@ def QueryAnomaliesByTimePostHandler():
     response = AnomalyResponse()
     for found_anomaly in anomalies:
       anomaly_data = GetAnomalyData(found_anomaly)
+      if client_email in utils.FUCHSIA_CLIENTS:
+        internal = client_email in utils.INTERNAL_CLIENTS
+        start_commit_row = client.GetFirstRowForRevision(
+          anomaly_data.start_revision)
+        anomaly_data.start_revision_hash = utils.GetFuchsiaCommitId(
+          start_commit_row, internal)
+        end_commit_row = client.GetFirstRowForRevision(
+          anomaly_data.end_revision)
+        anomaly_data.end_revision_hash = utils.GetFuchsiaCommitId(
+          end_commit_row, internal)
+
       response.AddAnomaly(anomaly_data.test_path, anomaly_data)
 
     return make_response(response.ToDict())
@@ -336,10 +359,32 @@ def CreateTestBatches(testList):
 
 def GetAnomalyData(anomaly_obj):
   bug_id = anomaly_obj.get('bug_id')
-
+  # Mark empty bug id value as 0, instead of -1,
+  # so that SkiaPerf UI is less confusion between invalid bug id and empty bug id
   if bug_id is None:
-    bug_id = '-1'
+    bug_id = '0'
 
+  subscription_names = anomaly_obj.get('subscription_names')
+  bug_components = ['']
+  bug_labels = []
+  bug_cc_emails = []
+  if subscription_names:
+    if len(subscription_names) > 1:
+      logging.warning(
+          "More than one subscription names in anomaly %s. Subs: %s",
+          anomaly_obj.id, subscription_names)
+    subscriptions = anomaly_obj.get('subscriptions')
+    if subscriptions:
+      bug_components = subscriptions[0].get('bug_components', [''])
+      bug_labels = subscriptions[0].get('bug_labels', [])
+      bug_cc_emails = subscriptions[0].get('bug_cc_emails', [])
+  else:
+    logging.warning('Anomaly %s has no subscription name.', anomaly_obj.id)
+    subscription_names = ['']
+
+  t_stat = anomaly_obj.get('t_statistic')
+  if math.isinf(t_stat):
+    t_stat=0
   return AnomalyData(
       test_path=utils.TestPath(anomaly_obj.get('test')),
       start_revision=anomaly_obj.get('start_revision'),
@@ -359,7 +404,11 @@ def GetAnomalyData(anomaly_obj):
       segment_size_after=anomaly_obj.get('segment_size_after'),
       segment_size_before=anomaly_obj.get('segment_size_before'),
       std_dev_before_anomaly=anomaly_obj.get('std_dev_before_anomaly'),
-  )
+      t_statistic=t_stat,
+      subscription_name=subscription_names[0],
+      bug_component=bug_components[0],
+      bug_labels=bug_labels,
+      bug_cc_emails=bug_cc_emails)
 
 def ValidateRequest(request_data, required_keys):
   missing_keys = []
