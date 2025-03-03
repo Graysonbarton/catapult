@@ -30,5 +30,8 @@ python-dateutil==2.8.2
 six==1.15.0
 
 uritemplate==3.0.1
-urllib3==1.26.6
+urllib3==1.26.19
 Werkzeug==1.0.1
+pillow>=10.3.0 # not directly required, pinned by Snyk to avoid a vulnerability
+requests>=2.32.2 # not directly required, pinned by Snyk to avoid a vulnerability
+zipp>=3.19.1 # not directly required, pinned by Snyk to avoid a vulnerability
