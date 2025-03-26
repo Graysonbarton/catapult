@@ -147,7 +147,7 @@ googleapis-common-protos==1.56.4 \
     --hash=sha256:8eb2cbc91b69feaf23e32452a7ae60e791e09967d81d4fcc7fc388182d1bd394 \
     --hash=sha256:c25873c47279387cfdcbdafa36149887901d36202cb645a0e4f29686bf6e4417
     # via google-api-core
-grpcio==1.47.0 \
+grpcio==1.58.3 \
     --hash=sha256:0425b5577be202d0a4024536bbccb1b052c47e0766096e6c3a5789ddfd5f400d \
     --hash=sha256:06c0739dff9e723bca28ec22301f3711d85c2e652d1c8ae938aa0f7ad632ef9a \
     --hash=sha256:08307dc5a6ac4da03146d6c00f62319e0665b01c6ffe805cfcaa955c17253f9c \
@@ -249,7 +249,7 @@ grpcio-tools==1.38.0 \
     --hash=sha256:e59cd98e3d33a3a9561a032d885ba7871bf7403afdd05dede360f74c58db19ca \
     --hash=sha256:ec7917310360b8ddecb737d62af4810c44d9b674c3e38ef507670ef933ebd4b4 \
     --hash=sha256:fa1098f49ccab3f06ee9533a9caa82ba02fe90d8461b6c35b983173ad3dcd6fa
-gunicorn==20.1.0 \
+gunicorn==23.0.0 \
     --hash=sha256:9dcc4547dbb1cb284accfb15ab5667a0e5d1881cc443e0677b4882a4067a807e \
     --hash=sha256:e0a968b5ba15f8a328fdfd7ab1fcb5af4470c28aaf7e55df02a99bc13138e6e8
 httplib2==0.20.4 \
